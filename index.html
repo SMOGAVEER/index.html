@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      
+      <h1 class="header_text">Do you wanna go out with me?</h1>
+    </div>
+    <p>
+      <a href="https://www.instagram.com/untoldcoding/">@untoldcoding</a>
+    </p>
+    <div class="gif_container">
+      <img src="https://i.pinimg.com/originals/d6/21/39/d6213905a25ebb6550c09f50c623c6ab.gif"
+        alt="cute animated illustration" />
+    </div>
+    <div class="buttons">
+      <button class="btn" id="yes button" onclick="nextpage()">Yes</button>
+      <button class="btn" id="no button" onmouseover="moveButton()" onclick="moveButton()">
+        No
+      </button>
+      <button id="myButton">click me</button>
+      <script>
+        function nextPage() {
+          window.location.href = "yes.html";
+        }
+
+        function moveButton() {
+          var x =
+            Math.random() *
+            (window.innerWidth -
+              document.getElementById("noButton").offsetWidth);
+          var y =
+            Math.random() *
+            (window.innerHeight -
+              document.getElementByID("noButton").offsetHeight);
+          document.getElementById("noButton").style.left =
+            '${x}px';
+          document.getElementById("noButton").style.top =
+            '${y}px';
+        } 
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>
